@@ -50,17 +50,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Text('Logout'),
                       ),
                     ]),
-            SizedBox(
+            const SizedBox(
               width: 10,
             )
           ],
         ),
         body: TabBarView(children: [
-          Text('Camera'),
+          const Text('Camera'),
           ListView.builder(
               itemCount: 100,
               itemBuilder: (context, index){
-              return ListTile(
+              return const ListTile(
                 leading: CircleAvatar(
                   backgroundImage: NetworkImage('https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg?auto=compress&cs=tinysrgb&w=600'),
                 ),
@@ -78,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const[
                         Text('New Updates'),
                       ],
                     ),
@@ -96,12 +96,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                         ),
                       ),
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         backgroundImage: NetworkImage('https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg?auto=compress&cs=tinysrgb&w=600'),
                       ),
                     ),
-                    title: Text('John Wick'),
-                    subtitle: Text('35 min ago'),
+                    title: const Text('John Wick'),
+                    subtitle: const Text('35 min ago'),
                   );
                 }
               }),
@@ -109,11 +109,11 @@ class _HomeScreenState extends State<HomeScreen> {
               itemCount: 100,
               itemBuilder: (context, index){
                 return  ListTile(
-                  leading: CircleAvatar(
+                  leading: const CircleAvatar(
                     backgroundImage: NetworkImage('https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg?auto=compress&cs=tinysrgb&w=600'),
                   ),
-                  title: Text('John Wick'),
-                  subtitle: Text('Yesterday, 10:29PM'),
+                  title: const Text('John Wick'),
+                  subtitle: const Text('Yesterday, 10:29PM'),
                   trailing: Icon(index %2 == 0?Icons.phone:Icons.videocam,color: Colors.teal,),
                 );
               }),
